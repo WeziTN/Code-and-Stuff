@@ -1,0 +1,4 @@
+1. Input MS Excel file location on the #load Excel data
+2. input database info in the #connect to database 
+3. run on Command Prompt as ADMIN
+ That's All...
