@@ -1,0 +1,145 @@
+body{
+    background-image: url("backgroung2.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: large;
+}
+a{
+    color: white;
+    font-style: italic;
+    font-size: large;
+}
+h1{
+    font-size: 39px;
+    text-align: center;
+}
+p{
+    font-size: large;
+}
+
+#logos{
+    font-family:"Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    text-align:center;
+    font-size: 50px;
+    vertical-align:top;
+    
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+.left{
+    display: block;
+
+}    
+
+}
+/*shop table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: #4cdf65;
+    text-align: center;
+}
+
+.row-1 td {
+    text-align: left;
+}
+
+.row-2 td {
+    text-align: center;
+}
+
+.row-3 td {
+    text-align: right;
+    align-self: center;
+}
+
+.col-1 {
+    vertical-align: top;
+}
+
+.col-2 {
+    vertical-align: middle;
+}
+
+.col-3 {
+    vertical-align: bottom;
+}
+
+#copyrighttext{
+    text-align: right;
+}
+/*navigation bar*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a, .dropdown-btn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, .dropdown:hover .dropdown-btn {
+    background-color: #111;
+}
+
+nav li.dropdown {
+    display: inline-block';
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+b{
+    font-size: larger;
+}
