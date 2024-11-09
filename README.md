@@ -1,2 +1,3 @@
 # Code-and-Stuff
-JUst a few items i made
+
+Some of MY personal Projects Feel free to look at em and inform yoh!! 
