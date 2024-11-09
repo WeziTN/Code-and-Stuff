@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Wina Bwangu</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .summary div {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        canvas {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="summary">
+            <div>
+                <h3>Total Revenue</h3>
+                <p id="total-revenue">0</p>
+            </div>
+            <div>
+                <h3>Total Capital</h3>
+                <p id="total-capital">0</p>
+            </div>
+        </div>
+        <canvas id="revenueChart"></canvas>
+    </div>
+
+    <script>
+        // Sample data based on your services
+        const services = [
+            { name: "Airtel Money", monthLimit: 350000, revenuePerKwacha: 0.05 },
+            { name: "MTN Money", monthLimit: 160000, revenuePerKwacha: 0.06 },
+            { name: "Zamtel Money", monthLimit: 70000, revenuePerKwacha: 0.045 },
+            { name: "Zanaco", monthLimit: 80000, revenuePerKwacha: 0.035 },
+            { name: "FNB", monthLimit: 80000, revenuePerKwacha: 0.04 }
+        ];
+
+        // Calculate total revenue and total capital
+        let totalRevenue = 0;
+        let totalCapital = 0;
+
+        services.forEach(service => {
+            totalRevenue += service.monthLimit * service.revenuePerKwacha;
+            totalCapital += service.monthLimit;
+        });
+
+        // Display calculated values
+        document.getElementById("total-revenue").innerText = totalRevenue.toFixed(2);
+        document.getElementById("total-capital").innerText = totalCapital.toFixed(2);
+
+        // Create Pie Chart
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueData = {
+            labels: services.map(service => service.name),
+            datasets: [{
+                label: 'Total Revenue',
+                data: services.map(service => service.monthLimit * service.revenuePerKwacha),
+                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545', '#17a2b8']
+            }]
+        };
+
+        const revenueChart = new Chart(ctx, {
+            type: 'pie',
+            data: revenueData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Revenue Distribution by Service'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

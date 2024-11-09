@@ -1,0 +1,57 @@
+/* Basic styles for the navigation and layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Navigation */
+.navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Registration Form Styling */
+section {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}

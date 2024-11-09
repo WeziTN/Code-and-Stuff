@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Wina Bwangu</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(45deg, #ff6b6b, #f8c291);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        /* Login Button */
+        .login-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Profile Button */
+        .profile-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background-color: hsl(122, 16%, 69%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .profile-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+        }
+
+        nav a:hover {
+            background-color: #f8c291;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background-color: #ff9f43;
+            color: white;
+            padding: 30px;
+            width: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+            background-color: #ff6b6b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+         /* Booth Table Styles */
+         .booth-table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .booth-table th, .booth-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .booth-table th {
+            background-color: #333;
+            color: white;
+        }
+
+        .booth-table tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+
+        .booth-table tr:hover {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Wina Bwangu!</h1>
+        <p>Your Trusted Financial Services Solution</p>
+        <!-- Select Profile -->
+        <a href="profile-selection.html" class="profile-btn">SELECT PROFILE</a>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#booths">Booth Locations</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Wina Bwangu</h2>
+        <p>Wina Bwangu is dedicated to bringing financial services to communities with ease and convenience. We provide a seamless, user-friendly experience to help you manage transactions quickly and efficiently.</p>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>Quick Transactions</h3>
+                <p>Fast and secure financial transactions anytime, anywhere.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Booth Locator</h3>
+                <p>Find the nearest Wina Bwangu service booth with ease.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Easy Payments</h3>
+                <p>Make payments effortlessly with our user-friendly platform.</p>
+            </div>
+            <div class="feature-box">
+                <h3>24/7 Support</h3>
+                <p>We're here to help you whenever you need assistance.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Booth Locations Section -->
+     <section id="booths">
+        <h2>Find a Booth Near You</h2>
+        <p>Locate our booths in your area and get the assistance you need.</p>
+        <table class="booth-table">
+            <tr>
+                <th>Booth</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Wina1</td>
+                <td>Lusaka CPD</td>
+            </tr>
+            <tr>
+                <td>Wina2</td>
+                <td>Libala</td>
+            </tr>
+            <tr>
+                <td>Wina3</td>
+                <td>Kabwata</td>
+            </tr>
+            <tr>
+                <td>Wina4</td>
+                <td>Mandevu</td>
+            </tr>
+            <tr>
+                <td>Wina5</td>
+                <td>Woodlands</td>
+            </tr>
+            <tr>
+                <td>Wina6</td>
+                <td>Matero East</td>
+            </tr>
+        </table>
+    </section>
+
+     <!-- Footer Section -->
+     <footer>
+        <p>&copy; 2024 Wina Bwangu. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

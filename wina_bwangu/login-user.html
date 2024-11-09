@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wina Bwangu Web App Prototype</title>
+    <link rel="stylesheet" href="winacss.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #333;
+        }
+
+        /* Login Section Styling */
+        #login {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+            margin-top: 20px;
+        }
+
+        #login h2 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            animation: slideIn 1s ease;
+        }
+
+        /* Input and Button Styling */
+        #login-form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        #login-form input[type="text"],
+        #login-form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        #login-form input:focus {
+            border-color: #ff6f61;
+            outline: none;
+        }
+
+        #login-form button {
+            background: #ff6f61;
+            color: #fff;
+            padding: 12px 0;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        #login-form button:hover {
+            background: #ff7e5f;
+        }
+
+        /* Back Buttons */
+        .back-btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background-color: #ff6f61;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn:hover {
+            background-color: #e85050;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            width: 100%;
+            font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Keyframes for Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Welcome to Wina Bwangu</h2>
+        <form id="login-form" action="authenticate.php" method="POST">
+            <input type="hidden" name="role" value="booth_manager">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Back to Homepage and Profile Selection Buttons -->
+        <div class="back-btn-container">
+            <a href="homepage.html" class="back-btn">Back to Homepage</a>
+            <a href="profile-selection.html" class="back-btn">Back to Profile Selection</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wina Bwangu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="winajs.js"></script>
+</body>
+</html>

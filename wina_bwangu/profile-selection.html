@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Selection - Wina Bwangu</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f3f3f3;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background: linear-gradient(45deg, #ff6b6b, #f8c291);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .navbar h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            color: #333;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Profile Selection Section */
+        .profile-selection {
+            padding: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-selection h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.5s ease-in-out;
+        }
+
+        .profile-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Profile Buttons */
+        .profile-btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .profile-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background-color: #ff6b6b;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn:hover {
+            background-color: #e85050;
+            transform: scale(1.05);
+        }
+        
+         /* Footer */
+         footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <h1>Select Your Profile</h1>
+    </header>
+
+    <!-- Profile Selection Section -->
+    <section class="profile-selection">
+        <h2>Choose Your Role</h2>
+        <div class="profile-options">
+            <a href="login-booth-manager.html" class="profile-btn">Booth Manager</a>
+            <a href="login-user.html" class="profile-btn">User</a>
+            <a href="login-admin.html" class="profile-btn">Admin</a>
+        </div>
+        <!-- Back to Homepage Button -->
+        <div>
+            <a href="homepage.html" class="back-btn">Back to Homepage</a>
+        </div>
+    </section>
+
+     <!-- Footer Section -->
+
+     <footer>
+        <p>&copy; 2024 Wina Bwangu. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
