@@ -1,3 +1,8 @@
+XXSQL by: W321
+
+Allows transfer of data from MS Excel to SQL
+
+How to use:
 1. Input MS Excel file location on the #load Excel data
 2. input database info in the #connect to database 
 3. run on Command Prompt as ADMIN
