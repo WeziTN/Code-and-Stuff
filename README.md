@@ -1,3 +1,8 @@
 # Code-and-Stuff
 
-Some of MY personal Projects Feel free to look at em and inform yoh!! 
+Some of the Basic Projects I've done 
+
+100% Wezi on this one...
+
+Feel free to Spazz on em stuffs👍🏿
+
