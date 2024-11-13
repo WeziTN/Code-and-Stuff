@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wina Bwangu Web App Prototype</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <section id="login">
+        <h2>Welcome to Wina Bwangu</h2>
+        <div id="error-message" style="color: red; margin-bottom: 15px;"></div>
+        
+        <form id="login-form" onsubmit="return handleLogin(event)">
+            <input type="hidden" name="role" value="user">
+            <input type="hidden" id="redirect" value="portal-user.html">
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Back to Homepage and Profile Selection Buttons -->
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">Back to Homepage</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wina Bwangu. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const redirectUrl = document.getElementById('redirect').value;
+
+            // Simple authentication (replace with your actual authentication logic)
+            if (username && password) {
+                window.location.href = redirectUrl; // Redirect to portal-user.html
+            } else {
+                document.getElementById('error-message').textContent = 'Invalid credentials';
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

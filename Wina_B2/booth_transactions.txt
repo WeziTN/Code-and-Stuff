@@ -1,0 +1,1275 @@
+TransactionID: TranactionID
+Booth: Mobile Booth
+Location: Location
+Service: Service
+RevenuePerKwacha: Revenue per Kwanch
+TransactionAmount: Transction Amount
+
+TransactionID: WB0000001
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 964
+
+TransactionID: WB0000002
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 220
+
+TransactionID: WB0000003
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 582
+
+TransactionID: WB0000004
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 349
+
+TransactionID: WB0000005
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 328
+
+TransactionID: WB0000006
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 192
+
+TransactionID: WB0000007
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1519
+
+TransactionID: WB0000008
+Booth: Wina4
+Location: Mandevu
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1113
+
+TransactionID: WB0000009
+Booth: Wina1
+Location: Lusaka CPD
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1999
+
+TransactionID: WB0000010
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3810
+
+TransactionID: WB0000011
+Booth: Wina6
+Location: Matero East
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 3270
+
+TransactionID: WB0000012
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1092
+
+TransactionID: WB0000013
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1056
+
+TransactionID: WB0000014
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 509
+
+TransactionID: WB0000015
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 34
+
+TransactionID: WB0000016
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 1658
+
+TransactionID: WB0000017
+Booth: Wina5
+Location: Woodlands
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 2167
+
+TransactionID: WB0000018
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2594
+
+TransactionID: WB0000019
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3656
+
+TransactionID: WB0000020
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4030
+
+TransactionID: WB0000021
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 989
+
+TransactionID: WB0000022
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4081
+
+TransactionID: WB0000023
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 925
+
+TransactionID: WB0000024
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 2312
+
+TransactionID: WB0000025
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 3280
+
+TransactionID: WB0000026
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 90
+
+TransactionID: WB0000027
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 2556
+
+TransactionID: WB0000028
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 673
+
+TransactionID: WB0000029
+Booth: Wina4
+Location: Mandevu
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4185
+
+TransactionID: WB0000030
+Booth: Wina1
+Location: Lusaka CPD
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 412
+
+TransactionID: WB0000031
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 310
+
+TransactionID: WB0000032
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4248
+
+TransactionID: WB0000033
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4105
+
+TransactionID: WB0000034
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1147
+
+TransactionID: WB0000035
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1815
+
+TransactionID: WB0000036
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1653
+
+TransactionID: WB0000037
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1045
+
+TransactionID: WB0000038
+Booth: Wina1
+Location: Lusaka CPD
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 4364
+
+TransactionID: WB0000039
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 2822
+
+TransactionID: WB0000040
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2046
+
+TransactionID: WB0000041
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1985
+
+TransactionID: WB0000042
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 3023
+
+TransactionID: WB0000043
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3728
+
+TransactionID: WB0000044
+Booth: Wina5
+Location: Woodlands
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 58
+
+TransactionID: WB0000045
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2744
+
+TransactionID: WB0000046
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1654
+
+TransactionID: WB0000047
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1331
+
+TransactionID: WB0000048
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 801
+
+TransactionID: WB0000049
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 967
+
+TransactionID: WB0000050
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 1988
+
+TransactionID: WB0000051
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3646
+
+TransactionID: WB0000052
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 54
+
+TransactionID: WB0000053
+Booth: Wina2
+Location: Libala
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 2121
+
+TransactionID: WB0000054
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 564
+
+TransactionID: WB0000055
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1011
+
+TransactionID: WB0000056
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 2950
+
+TransactionID: WB0000057
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 57
+
+TransactionID: WB0000058
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2382
+
+TransactionID: WB0000059
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 349
+
+TransactionID: WB0000060
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2479
+
+TransactionID: WB0000061
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1537
+
+TransactionID: WB0000062
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 2802
+
+TransactionID: WB0000063
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1290
+
+TransactionID: WB0000064
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4331
+
+TransactionID: WB0000065
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1338
+
+TransactionID: WB0000066
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1477
+
+TransactionID: WB0000067
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3430
+
+TransactionID: WB0000068
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 451
+
+TransactionID: WB0000069
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 80
+
+TransactionID: WB0000070
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 2002
+
+TransactionID: WB0000071
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3235
+
+TransactionID: WB0000072
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4156
+
+TransactionID: WB0000073
+Booth: Wina5
+Location: Woodlands
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 22
+
+TransactionID: WB0000074
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2156
+
+TransactionID: WB0000075
+Booth: Wina5
+Location: Woodlands
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 2267
+
+TransactionID: WB0000076
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 2419
+
+TransactionID: WB0000077
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1691
+
+TransactionID: WB0000078
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2736
+
+TransactionID: WB0000079
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4282
+
+TransactionID: WB0000080
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 2331
+
+TransactionID: WB0000081
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1405
+
+TransactionID: WB0000082
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 945
+
+TransactionID: WB0000083
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 688
+
+TransactionID: WB0000084
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 189
+
+TransactionID: WB0000085
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 3787
+
+TransactionID: WB0000086
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 3407
+
+TransactionID: WB0000087
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1105
+
+TransactionID: WB0000088
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 174
+
+TransactionID: WB0000089
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 1440
+
+TransactionID: WB0000090
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3344
+
+TransactionID: WB0000091
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2676
+
+TransactionID: WB0000092
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 812
+
+TransactionID: WB0000093
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 4224
+
+TransactionID: WB0000094
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 592
+
+TransactionID: WB0000095
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1662
+
+TransactionID: WB0000096
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1915
+
+TransactionID: WB0000097
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1866
+
+TransactionID: WB0000098
+Booth: Wina6
+Location: Matero East
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4320
+
+TransactionID: WB0000099
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 228
+
+TransactionID: WB0000100
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3318
+
+TransactionID: WB0000101
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3615
+
+TransactionID: WB0000102
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4156
+
+TransactionID: WB0000103
+Booth: Wina3
+Location: Kabwata
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1401
+
+TransactionID: WB0000104
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2014
+
+TransactionID: WB0000105
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 3475
+
+TransactionID: WB0000106
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 2452
+
+TransactionID: WB0000107
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1720
+
+TransactionID: WB0000108
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 118
+
+TransactionID: WB0000109
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 779
+
+TransactionID: WB0000110
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1623
+
+TransactionID: WB0000111
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2679
+
+TransactionID: WB0000112
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1976
+
+TransactionID: WB0000113
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 974
+
+TransactionID: WB0000114
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2911
+
+TransactionID: WB0000115
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 279
+
+TransactionID: WB0000116
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3646
+
+TransactionID: WB0000117
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 855
+
+TransactionID: WB0000118
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1412
+
+TransactionID: WB0000119
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2137
+
+TransactionID: WB0000120
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1800
+
+TransactionID: WB0000121
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1219
+
+TransactionID: WB0000122
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 3582
+
+TransactionID: WB0000123
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 760
+
+TransactionID: WB0000124
+Booth: Wina4
+Location: Mandevu
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 2308
+
+TransactionID: WB0000125
+Booth: Wina1
+Location: Lusaka CPD
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1941
+
+TransactionID: WB0000126
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2068
+
+TransactionID: WB0000127
+Booth: Wina6
+Location: Matero East
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 4242
+
+TransactionID: WB0000128
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2587
+
+TransactionID: WB0000129
+Booth: Wina2
+Location: Libala
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 4196
+
+TransactionID: WB0000130
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1463
+
+TransactionID: WB0000131
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 2199
+
+TransactionID: WB0000132
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2956
+
+TransactionID: WB0000133
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1663
+
+TransactionID: WB0000134
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2525
+
+TransactionID: WB0000135
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4404
+
+TransactionID: WB0000136
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 1012
+
+TransactionID: WB0000137
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 69
+
+TransactionID: WB0000138
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4241
+
+TransactionID: WB0000139
+Booth: Wina4
+Location: Mandevu
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 3379
+
+TransactionID: WB0000140
+Booth: Wina2
+Location: Libala
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 3255
+
+TransactionID: WB0000141
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1705
+
+TransactionID: WB0000142
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1039
+
+TransactionID: WB0000143
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 254
+
+TransactionID: WB0000144
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 870
+
+TransactionID: WB0000145
+Booth: Wina4
+Location: Mandevu
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 772
+
+TransactionID: WB0000146
+Booth: Wina1
+Location: Lusaka CPD
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 1791
+
+TransactionID: WB0000147
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3320
+
+TransactionID: WB0000148
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4185
+
+TransactionID: WB0000149
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 100
+
+TransactionID: WB0000150
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 3794
+
+TransactionID: WB0000151
+Booth: Wina6
+Location: Matero East
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 498
+
+TransactionID: WB0000152
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2566
+
+TransactionID: WB0000153
+Booth: Wina2
+Location: Libala
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4459
+
+TransactionID: WB0000154
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 3916
+
+TransactionID: WB0000155
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 528
+
+TransactionID: WB0000156
+Booth: Wina2
+Location: Libala
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 2067
+
+TransactionID: WB0000157
+Booth: Wina5
+Location: Woodlands
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1119
+
+TransactionID: WB0000158
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1209
+
+TransactionID: WB0000159
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 1950
+
+TransactionID: WB0000160
+Booth: Wina3
+Location: Kabwata
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 1268
+
+TransactionID: WB0000161
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1066
+
+TransactionID: WB0000162
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 4419
+
+TransactionID: WB0000163
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2065
+
+TransactionID: WB0000164
+Booth: Wina2
+Location: Libala
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 2663
+
+TransactionID: WB0000165
+Booth: Wina3
+Location: Kabwata
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 2075
+
+TransactionID: WB0000166
+Booth: Wina4
+Location: Mandevu
+Service: Zamtel Money
+RevenuePerKwacha: 0.045
+TransactionAmount: 3284
+
+TransactionID: WB0000167
+Booth: Wina5
+Location: Woodlands
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 425
+
+TransactionID: WB0000168
+Booth: Wina3
+Location: Kabwata
+Service: Zanaco
+RevenuePerKwacha: 0.035
+TransactionAmount: 1856
+
+TransactionID: WB0000169
+Booth: Wina4
+Location: Mandevu
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 405
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 12343
+AmountAfterTax: 629.49
+DateTime: 2024-11-13T08:46:57.645Z
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 156
+AmountAfterTax: 6.63
+DateTime: 2024-11-13T08:47:43.283Z
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 125
+AmountAfterTax: 6.38
+DateTime: 2024-11-13T08:48:07.922Z
+
+TransactionID: WB00000170
+Booth: Wina2
+Location: Libala
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 55
+AmountAfterTax: 1.87
+DateTime: 2024-11-13T08:49:02.108Z
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: FNB
+RevenuePerKwacha: 0.04
+TransactionAmount: 1000
+AmountAfterTax: 34.00
+DateTime: 2024-11-13T08:58:21.495Z
+----------------------------------------
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 100
+AmountAfterTax: 4.25
+DateTime: 2024-11-13T08:58:38.927Z
+----------------------------------------
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 99
+AmountAfterTax: 4.21
+DateTime: 2024-11-13T09:40:55.867Z
+----------------------------------------
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: Airtel Money
+RevenuePerKwacha: 0.05
+TransactionAmount: 98
+AmountAfterTax: 4.17
+DateTime: 2024-11-13T09:42:29.552Z
+----------------------------------------
+
+TransactionID: WB00000170
+Booth: Wina1
+Location: Lusaka CPD
+Service: MTN Money
+RevenuePerKwacha: 0.06
+TransactionAmount: 100
+AmountAfterTax: 5.10
+DateTime: 2024-11-13T09:43:10.952Z
+----------------------------------------
+

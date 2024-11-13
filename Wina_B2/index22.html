@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Booth Transactions</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(45deg, #ff6b6b, #f8c291);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        select {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 14px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        select:hover {
+            background-color: #f8f8f8;
+        }
+
+        /* Display Area */
+        #displayArea {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .transaction {
+            background-color: #ff9f43;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .transaction:hover {
+            transform: scale(1.02);
+            background-color: #ff6b6b;
+        }
+
+        .transaction h4 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .transaction p {
+            margin: 8px 0;
+            color: white;
+        }
+
+        .transaction strong {
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        hr {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .filter-controls {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            select {
+                margin-right: 0;
+                width: 200px;
+            }
+
+            #displayArea {
+                padding: 20px;
+            }
+        }
+    </style>
+    <script>
+        let allTransactions = [];
+
+        // Fetch and initialize data on page load
+        async function fetchData() {
+            const response = await fetch('booth_transactions.txt');
+            const data = await response.text();
+            allTransactions = parseData(data);
+            populateDropdowns(allTransactions);
+        }
+
+        // Parse the text data into a usable format
+        function parseData(data) {
+            const transactions = [];
+            const entries = data.trim().split('\n\n');
+            for (const entry of entries) {
+                const lines = entry.split('\n');
+                const transaction = {};
+                for (const line of lines) {
+                    const [key, value] = line.split(': ').map(item => item.trim());
+                    transaction[key] = value;
+                }
+                transactions.push(transaction);
+            }
+            return transactions;
+        }
+
+        // Populate the dropdown menus based on data
+        function populateDropdowns(transactions) {
+            const boothSet = new Set();
+            const serviceSet = new Set();
+            const locationSet = new Set();
+
+            transactions.forEach(transaction => {
+                boothSet.add(transaction.Booth);
+                serviceSet.add(transaction.Service);
+                locationSet.add(transaction.Location);
+            });
+
+            populateDropdown('boothFilter', boothSet);
+            populateDropdown('serviceFilter', serviceSet);
+            populateDropdown('locationFilter', locationSet);
+        }
+
+        // Helper function to populate a dropdown menu
+        function populateDropdown(dropdownId, optionsSet) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.innerHTML = '<option value="">All</option>';
+            optionsSet.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option;
+                opt.textContent = option;
+                dropdown.appendChild(opt);
+            });
+        }
+
+        // Display filtered data based on dropdown selections
+        function displayFilteredData() {
+            const selectedBooth = document.getElementById("boothFilter").value;
+            const selectedService = document.getElementById("serviceFilter").value;
+            const selectedLocation = document.getElementById("locationFilter").value;
+
+            const filteredTransactions = allTransactions.filter(transaction => {
+                return (selectedBooth === "" || transaction.Booth === selectedBooth) &&
+                       (selectedService === "" || transaction.Service === selectedService) &&
+                       (selectedLocation === "" || transaction.Location === selectedLocation);
+            });
+
+            displayTransactions(filteredTransactions);
+        }
+
+        // Render transactions in the display area
+        function displayTransactions(transactions) {
+            const displayArea = document.getElementById("displayArea");
+            displayArea.innerHTML = "";  // Clear previous content
+
+            transactions.forEach((transaction, index) => {
+                const transactionDiv = document.createElement("div");
+                transactionDiv.classList.add("transaction");
+                transactionDiv.innerHTML = `
+                    <h4>Transaction ${index + 1}</h4>
+                    <p><strong>ID:</strong> ${transaction.TransactionID}</p>
+                    <p><strong>Booth:</strong> ${transaction.Booth}</p>
+                    <p><strong>Location:</strong> ${transaction.Location}</p>
+                    <p><strong>Service:</strong> ${transaction.Service}</p>
+                    <p><strong>Revenue per Kwacha:</strong> ${transaction.RevenuePerKwacha}</p>
+                    <p><strong>Transaction Amount:</strong> ${transaction.TransactionAmount}</p>
+                    <p><strong>Amount After Tax:</strong> ${transaction.AmountAfterTax}</p>
+                    <hr>
+                `;
+                displayArea.appendChild(transactionDiv);
+            });
+        }
+
+        // Load transactions on page load
+        window.onload = fetchData;
+    </script>
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='portal-user.html'" style="
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;">
+        Back to Portal
+    </button>
+        <h1>View Booth Transactions</h1>
+    </header>
+
+    <div class="filter-controls">
+        <label for="boothFilter">Select Booth:</label>
+        <select id="boothFilter" onchange="displayFilteredData()"></select>
+
+        <label for="serviceFilter">Select Service:</label>
+        <select id="serviceFilter" onchange="displayFilteredData()"></select>
+
+        <label for="locationFilter">Select Location:</label>
+        <select id="locationFilter" onchange="displayFilteredData()"></select>
+    </div>
+
+    <div id="displayArea"></div>
+
+    <footer>
+        <p>&copy; 2024 Wina Bwangu. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal - Wina Bwangu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Add some basic styling for the buttons */
+        .section button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #ff9f43;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .section button:hover {
+            background-color: #ff6b6b;
+        }
+
+        .logout-button {
+            background-color: #ff6b6b !important;
+        }
+
+        .logout-button:hover {
+            background-color: #ff4757 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Portal</h2>
+        <div id="user-info"></div>
+        
+        <div class="section">
+            <h3>Your Transactions</h3>
+            <button onclick="window.location.href='transactions.html'">Make A Transaction</button>
+        </div>
+        
+        <div class="section">
+            <h3>Transaction History</h3>
+            <button onclick="window.location.href='index22.html'">View Your Transactions History</button>
+        </div>
+        
+        <div class="section">
+            <h3>Dashboard</h3>
+            <button onclick="window.location.href='dashboard.html'">View Dashboard</button>
+        </div>
+
+        <div class="section">
+            <button onclick="window.location.href='index.html'" class="logout-button">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add confirmation before logout
+        function logout() {
+            if(confirm('Are you sure you want to logout?')) {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>

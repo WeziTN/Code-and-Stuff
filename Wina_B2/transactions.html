@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booth Transactions</title>
+    <script>
+        let allTransactions = [];
+        let transactionCount = 1;
+
+        async function fetchData() {
+            try {
+                const response = await fetch('booth_transactions.txt');
+                if (!response.ok) {
+                    throw new Error('Failed to load booth data');
+                }
+                const data = await response.text();
+                allTransactions = parseData(data);
+                populateBoothOptions(allTransactions);
+                updateTransactionCount();
+                showNotification("Booth data loaded successfully", "success");
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                showNotification("Error loading booth data: " + error.message, "error");
+            }
+        }
+
+        function updateTransactionCount() {
+            // Update transaction count based on existing transactions
+            const existingIds = allTransactions
+                .map(t => t.TransactionID)
+                .filter(id => id.startsWith('WB'))
+                .map(id => parseInt(id.replace('WB', '')));
+            
+            if (existingIds.length > 0) {
+                transactionCount = Math.max(...existingIds) + 1;
+            }
+        }
+
+        function parseData(data) {
+            const transactions = [];
+            const entries = data.trim().split('\n\n');
+            
+            for (const entry of entries) {
+                if (!entry.trim()) continue;
+                
+                const lines = entry.split('\n');
+                const transaction = {};
+                
+                for (const line of lines) {
+                    if (!line.trim()) continue;
+                    const [key, ...valueParts] = line.split(': ');
+                    const value = valueParts.join(': ').trim();
+                    transaction[key] = value;
+                }
+                
+                transactions.push(transaction);
+            }
+            
+            return transactions;
+        }
+
+        function populateBoothOptions(transactions) {
+            const boothSet = new Set();
+            transactions.forEach(transaction => boothSet.add(transaction.Booth));
+
+            const boothSelect = document.getElementById("boothSelect");
+            boothSelect.innerHTML = '<option value="">Select Booth</option>';
+            boothSet.forEach(booth => {
+                const option = document.createElement('option');
+                option.value = booth;
+                option.textContent = booth;
+                boothSelect.appendChild(option);
+            });
+        }
+
+        function onBoothChange() {
+            const selectedBooth = document.getElementById("boothSelect").value;
+            const locationField = document.getElementById("locationDisplay");
+            const serviceSelect = document.getElementById("serviceSelect");
+            const filteredTransactions = allTransactions.filter(t => t.Booth === selectedBooth);
+
+            if (filteredTransactions.length > 0) {
+                locationField.value = filteredTransactions[0].Location;
+            }
+
+            const serviceSet = new Set(filteredTransactions.map(t => t.Service));
+            serviceSelect.innerHTML = '<option value="">Select Service</option>';
+            serviceSet.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service;
+                option.textContent = service;
+                serviceSelect.appendChild(option);
+            });
+        }
+
+        function onServiceChange() {
+            const selectedBooth = document.getElementById("boothSelect").value;
+            const selectedService = document.getElementById("serviceSelect").value;
+            const revenueField = document.getElementById("revenuePerKwacha");
+
+            const transaction = allTransactions.find(t => 
+                t.Booth === selectedBooth && t.Service === selectedService);
+            revenueField.value = transaction ? transaction.RevenuePerKwacha : '';
+
+            calculateAmount();
+        }
+
+        function generateTransactionID() {
+            const transactionID = "WB" + String(transactionCount).padStart(8, '0');
+            transactionCount++;
+            document.getElementById("transactionID").value = transactionID;
+            return transactionID;
+        }
+
+        function calculateAmount() {
+            const transactionAmountInput = document.getElementById("transactionAmount");
+            const revenuePerKwachaInput = document.getElementById("revenuePerKwacha");
+            const amountAfterTaxInput = document.getElementById("amountAfterTax");
+
+            const transactionAmount = parseFloat(transactionAmountInput.value) || 0;
+            const revenuePerKwacha = parseFloat(revenuePerKwachaInput.value) || 0;
+            const taxRate = 0.15;
+
+            const preTaxAmount = transactionAmount * revenuePerKwacha;
+            const amountAfterTax = preTaxAmount * (1 - taxRate);
+
+            amountAfterTaxInput.value = amountAfterTax.toFixed(2);
+            updateTransactionSummary();
+        }
+
+        function updateTransactionSummary() {
+            const summary = document.getElementById("transactionSummary");
+            const amount = document.getElementById("transactionAmount").value;
+            const afterTax = document.getElementById("amountAfterTax").value;
+            
+            if (amount && afterTax) {
+                summary.innerHTML = `
+                    <strong>Transaction Summary:</strong><br>
+                    Amount: K${amount}<br>
+                    After Tax (15%): K${afterTax}
+                `;
+                summary.style.display = "block";
+            } else {
+                summary.style.display = "none";
+            }
+        }
+
+        function validateForm() {
+            const booth = document.getElementById("boothSelect").value;
+            const service = document.getElementById("serviceSelect").value;
+            const amount = document.getElementById("transactionAmount").value;
+
+            if (!booth) {
+                showNotification("Please select a booth", "error");
+                return false;
+            }
+            if (!service) {
+                showNotification("Please select a service", "error");
+                return false;
+            }
+            if (!amount || amount <= 0) {
+                showNotification("Please enter a valid amount", "error");
+                return false;
+            }
+            return true;
+        }
+
+        function showNotification(message, type) {
+            const notification = document.getElementById("notification");
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = "block";
+            
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 3000);
+        }
+
+        function clearForm() {
+            document.getElementById("transactionForm").reset();
+            document.getElementById("transactionID").value = "";
+            document.getElementById("locationDisplay").value = "";
+            document.getElementById("revenuePerKwacha").value = "";
+            document.getElementById("amountAfterTax").value = "";
+            document.getElementById("transactionSummary").style.display = "none";
+            showNotification("Succeess!", "success");
+        }
+
+        async function addTransaction(event) {
+            event.preventDefault();
+            
+            if (!validateForm()) {
+                return;
+            }
+
+            const transactionId = generateTransactionID();
+            calculateAmount();
+
+            const transaction = {
+                TransactionID: transactionId,
+                Booth: document.getElementById("boothSelect").value,
+                Location: document.getElementById("locationDisplay").value,
+                Service: document.getElementById("serviceSelect").value,
+                RevenuePerKwacha: document.getElementById("revenuePerKwacha").value,
+                TransactionAmount: document.getElementById("transactionAmount").value,
+                AmountAfterTax: document.getElementById("amountAfterTax").value,
+                DateTime: new Date().toISOString()
+            };
+
+            try {
+                const response = await fetch('save_transaction.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(transaction)
+                });
+
+                const result = await response.json();
+                
+                if (!result.success) {
+                    throw new Error(result.message || 'Failed to save transaction');
+                }
+
+                // Update local data
+                allTransactions.push(transaction);
+                
+                showNotification("Transaction saved successfully!", "success");
+                clearForm();
+                
+                // Update transaction count display
+                document.getElementById("totalTransactions").textContent = allTransactions.length;
+            } catch (error) {
+                console.error('Error saving transaction:', error);
+                showNotification("Error saving transaction: " + error.message, "error");
+            }
+        }
+
+        async function refreshTransactions() {
+            await fetchData();
+            document.getElementById("totalTransactions").textContent = allTransactions.length;
+            showNotification("Transactions refreshed", "success");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchData();
+            document.getElementById("transactionAmount").addEventListener("input", calculateAmount);
+            document.getElementById("revenuePerKwacha").addEventListener("input", calculateAmount);
+        });
+    </script>
+
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+            overflow-x: hidden; 
+        }
+        h1 { 
+            background: linear-gradient(45deg, #ff6b6b, #f8c291); 
+            color: white; 
+            padding: 40px 0; 
+            text-align: center; 
+            margin: 0; 
+        }
+        #transactionForm { 
+            max-width: 600px; 
+            margin: 30px auto; 
+            padding: 20px; 
+            background-color: #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        label { 
+            display: inline-block; 
+            width: 150px; 
+            margin-bottom: 10px; 
+            font-weight: bold; 
+        }
+        input, select { 
+            width: 250px; 
+            padding: 8px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            margin-bottom: 10px; 
+        }
+        input[readonly] { 
+            background-color: #f8f8f8; 
+        }
+        button { 
+            display: block; 
+            width: 100%; 
+            padding: 12px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1rem; 
+            margin-top: 20px; 
+        }
+        button:hover { 
+            background-color: #45a049; 
+        }
+        
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #555;
+        }
+        
+        .back-btn:first-of-type {
+            background-color: #ff9f43;
+        }
+        .back-btn:first-of-type:hover {
+            background-color: #ff6b6b;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            z-index: 1000;
+            display: none;
+        }
+        .notification.success {
+            background-color: #4CAF50;
+        }
+        .notification.error {
+            background-color: #f44336;
+        }
+
+        .clear-btn {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+        .clear-btn:hover {
+            background-color: #da190b;
+        }
+
+        .refresh-btn {
+            background-color: #2196F3;
+            margin-top: 10px;
+        }
+        .refresh-btn:hover {
+            background-color: #1976D2;
+        }
+
+        #transactionSummary {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            display: none;
+        }
+
+        .stats-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booth Transactions</h1>
+
+    <div class="stats-container">
+        Total Transactions: <span id="totalTransactions">0</span>
+        <button type="button" class="refresh-btn" onclick="refreshTransactions()">
+            Refresh Transactions
+        </button>
+    </div>
+
+    <form id="transactionForm" onsubmit="addTransaction(event)">
+        <div id="notification" class="notification"></div>
+
+        <label for="transactionID">Transaction ID:</label>
+        <input type="text" id="transactionID" readonly><br><br>
+
+        <label for="boothSelect">Select Booth:</label>
+        <select id="boothSelect" onchange="onBoothChange()"></select><br><br>
+
+        <label for="locationDisplay">Location:</label>
+        <input type="text" id="locationDisplay" readonly><br><br>
+
+        <label for="serviceSelect">Select Service:</label>
+        <select id="serviceSelect" onchange="onServiceChange()"></select><br><br>
+
+        <label for="revenuePerKwacha">Revenue per Kwacha:</label>
+        <input type="text" id="revenuePerKwacha" readonly><br><br>
+
+        <label for="transactionAmount">Transaction Amount:</label>
+        <input type="number" id="transactionAmount" required><br><br>
+
+        <label for="amountAfterTax">Amount After Tax:</label>
+        <input type="text" id="amountAfterTax" readonly><br><br>
+
+        <div id="transactionSummary"></div>
+
+        <button type="submit">Add Transaction</button>
+        <button type="button" class="clear-btn" onclick="clearForm()">Clear Form</button>
+    </form>
+
+    <a href="index22.html" class="back-btn" style="margin-bottom: 10px;">View All Transactions</a>
+    <a href="portal-user.html" class="back-btn">Back to Portal</a>
+    <a href="index.html" class="back-btn">Back to Homepage</a>
+</body>
+</html>

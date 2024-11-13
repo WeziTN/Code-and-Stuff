@@ -1,0 +1,23 @@
+UserID: UserID
+Username: Username
+Password: Password
+Role: Role
+Status: Status
+
+UserID: WU0000001
+Username: john_doe
+Password: $2y$10$abcdefghijklmnopqrstuvwxyz123456
+Role: booth_manager
+Status: active
+
+UserID: WU0000002
+Username: jane_smith
+Password: $2y$10$123456abcdefghijklmnopqrstuvwxyz
+Role: user
+Status: active
+
+UserID: WU0000003
+Username: admin_user
+Password: $2y$10$zyxwvutsrqponmlkjihgfedcba654321
+Role: admin
+Status: active
